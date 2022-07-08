@@ -1,0 +1,11 @@
+.main-section{
+    width: 90%;
+    border: 1px solid lightblue;
+    margin: auto;
+}
+.title{
+    font-weight: bold;
+}
+li{
+    list-style: none;
+}

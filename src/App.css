@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray;
+    border-bottom: 2px solid gray;
+}
+.header > h1{
+    margin-right: 30px;
+}
+.logo{
+    height: 30px;
+    width: 30px;
+}
+.logo > img{
+    height: 30px;
+    width: 30px;
+}
