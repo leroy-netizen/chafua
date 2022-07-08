@@ -1,27 +1,35 @@
-function App() {
-  // declare functions to handle events
-  const handleClick = () => {
-    console.log("I have been Clicked");
+import React, { Component } from "react";
+class App extends Component {
+  state = {
+    name: "Baba wa keja",
+    age: 49,
+    school: "Moringa",
+    count: 0,
   };
 
-  const handleChange = (event) => {
-    console.log(event.target.value);
+  Add = () => {
+    this.setState({
+      count: this.state.count + 1,
+      school: (this.state.school = "Technical University Of Kenya"),
+    });
   };
-  let user = "Ombiji";
-
-  // JSX (Javascript XML) syntax similar to html
-  return (
-    <>
-      <input type="text" placeholder="Enter Name" onChange={handleChange} />
-      <h1>Niajeni majamaa</h1>
-      <h1>Moringa School Devs</h1>
-      <button onClick={handleClick}> Click Me</button>
-    </>
-  );
+  Sub = () => {
+    this.setState({
+      count: this.state.count - 1,
+    });
+  };
+  render() {
+    return (
+      <>
+        <h1>REACT STATE</h1>
+        <h2>Name:{this.state.name}</h2>
+        <h2>Age:{this.state.age}</h2>
+        <h2>School:{this.state.school}</h2>
+        <h4>Counter value:{this.state.count}</h4>
+        <button onClick={this.Add}>Add One</button>
+        <button onClick={this.Sub}>Sub One</button>
+      </>
+    );
+  }
 }
-
 export default App;
-
-// Vanilla Javascript Imparative
-// const btn = document.getElementById('buttonn');
-// btn.addEventListener('click', ()=> handleClick)
